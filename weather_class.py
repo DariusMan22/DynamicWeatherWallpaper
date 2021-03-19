@@ -30,5 +30,6 @@ class Weather:
                 self.change_Linux()
             else:
                 print("Not supported for the moment")
-        else:
-            print("Not supported for the moment")
+        elif platform.uname()[0] == "Windows":
+            if platform.uname()[3].find("Windows10"):
+                print("Not supported for the moment")
