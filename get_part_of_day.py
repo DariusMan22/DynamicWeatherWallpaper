@@ -1,8 +1,9 @@
 import datetime
 
+
 def get_moment():
     """returns a string that represents the moment of the day associated with an hour interval"""
-    
+
     now = datetime.datetime.now()
     hour = int(now.strftime('%H'))
 
