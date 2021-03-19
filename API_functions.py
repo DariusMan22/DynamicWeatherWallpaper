@@ -16,16 +16,6 @@ def openweathermap_get(api_city):
     weather_param = [api_city[1], current_weather, description, temperature]
     return weather_param
 
-def input_get():
-    """function that creates and returns a list of the api_key and city_name that came from the user input"""
-    api_key = '4d349fc5726852568f381fb6e06dc0f2'
-    api_city = []
-    api_city.append(api_key)
-    print("Please insert the name of your City:")
-    city_name = input()
-    api_city.append(city_name)
-    return api_city
-
 def weather_object_get(api_city):
     """ function that returns an weather_object based on the current reading from the api"""
     weather_param = []

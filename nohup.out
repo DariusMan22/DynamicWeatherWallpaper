@@ -1,0 +1,9 @@
+python: can't open file 'test.py': [Errno 2] No such file or directory
+Please insert the name of your City:
+Traceback (most recent call last):
+  File "main.py", line 11, in <module>
+    api_city = input_functions.city_input()
+  File "/home/dariusvm/Documents/wallpaper_weather/input_functions.py", line 7, in city_input
+    city_name = input()
+OSError: [Errno 9] Bad file descriptor
+python3: can't open file 'PalicoHelper.py': [Errno 2] No such file or directory

@@ -29,7 +29,7 @@ class Weather:
         os.system(f"gsettings set org.gnome.desktop.background picture-uri file://{path}")
 
     def change_wallpaper(self):
-        """changes wallpaper based on the weather given"""
+        """changes wallpaper based on the weather given, also checks for the operating system"""
         
         if platform.uname()[0] == "Linux":
             if platform.uname()[3].find("Ubuntu") != -1:
