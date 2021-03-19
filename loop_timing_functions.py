@@ -1,13 +1,13 @@
-from threading import Thread
-from time import sleep
+import threading
+import time
 
 def call_at_interval(period, callback, args):
     while True:
-        sleep(period)
+        time.sleep(period)
         callback(*args)
 
 def setInterval(period, callback, *args):
-    """Use to set a periodic time interval in which I call the weather API"""
+    """Used to set a periodic time interval in which I call the weather API"""
     
-    Thread(target=call_at_interval, args=(period, callback, args)).start()
+    threading.Thread(target=call_at_interval, args=(period, callback, args)).start()
     
