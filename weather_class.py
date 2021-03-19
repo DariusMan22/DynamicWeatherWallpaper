@@ -1,10 +1,7 @@
 import platform
-import os
-import platform
 import image_handling
-import get_part_of_day
 import random
-
+import wallpaper_handling
 
 class Weather:
     """ class that handles weather variables needed """
@@ -23,13 +20,7 @@ class Weather:
 
     def change_Linux(self):
         """checks the description,weather and temperature in order to pick the right wallpaper"""
-        image_handling.search_and_dw(
-            f'{self.current_weather} {self.description} {get_part_of_day.get_moment()} {self.city_name} wallpaper {random.randint(1,100)}')
-        tempath = os.path.abspath('temp_wallpaper/000001.jpg')
-        path = os.path.abspath('Wallpapers/000001.jpg')
-        os.replace(tempath, path)
-        os.system(
-            f"gsettings set org.gnome.desktop.background picture-uri file://{path}")
+        wallpaper_handling.for_linux(self.current_weather,self.description)
 
     def change_wallpaper(self):
         """changes wallpaper based on the weather given, also checks for the operating system"""
