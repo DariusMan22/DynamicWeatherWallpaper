@@ -1,6 +1,8 @@
 # DynamicWeatherWallpaper
 ->For now this project only supports Linux ubuntu distribution and Windows10 64bit.
+
 ->You will need an API key from openweathermap.org to use this code. You can generate the key for free.
+
 ->the key needs to be inserted in the config.ini file as such: api_key = 24234234asfsdf2321342 (just paste the key that you got from the weather site)
 
   This is a Pyhton program that extracts data about weather based on the chosen city by the user through the openweathermap.org API and changes the wallpaper of the user dynamically according to the results.
