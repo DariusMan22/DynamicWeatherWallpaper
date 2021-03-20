@@ -19,13 +19,23 @@ def search_and_dw(keyword):
     path = os.path.abspath('temp_wallpaper')
     google_crawler = icrawler.builtin.GoogleImageCrawler(storage={'root_dir': path})
     google_crawler.crawl(keyword=keyword,filters= filters, max_num=1)
-    
 
-def get_image_name():
-    """the purpose is to get the name of the image file independent on the jpg/png/gif etc extension"""
 
-    path = os.path.abspath("temp_wallpaper")
-    contents = os.listdir(path)
+def get_image_path(half_path):
+    image_name = get_image_name("temp_wallpaper")
+    path = os.path.abspath(f'{half_path}{image_name}')
+    return path    
+
+def get_image_name(half_path):
+    """the purpose is to get the name of the image file independent on the jpg/png/gif etc extensions"""
+
+    pathdir = os.path.abspath(half_path)
+    contents = os.listdir(pathdir)
     for content in contents:
         if content.find("000001") != -1:
             return content
+
+def swicth_image():
+    path = get_image_path('Wallpapers/')
+    temppath = get_image_path("temp_wallpaper/")
+    os.replace(temppath, path)
