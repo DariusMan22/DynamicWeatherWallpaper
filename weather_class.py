@@ -13,7 +13,7 @@ class Weather:
         self.description = description
 
     def connvertKtoC(self):
-        """comverts kelvin to celcius"""
+        """comverts kelvin to celsius"""
 
         Ctemperature = self.temperature - 272.15
         return Ctemperature

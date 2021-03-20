@@ -1,15 +1,11 @@
-import config_handling
 
 
 def city_input():
-    """function that creates and returns a list of the api_key and city_name that came from the user input"""
-    api_key = config_handling.get_key()
-    api_city = []
-    api_city.append(api_key)
+    """function that creates and returns city_name that came from the user input"""
+
     print("Please insert the name of your City:")
     city_name = input()
-    api_city.append(city_name)
-    return api_city
+    return city_name
 
 
 def time_input():

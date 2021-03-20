@@ -3,14 +3,17 @@ import weather_class
 import loop_timing_functions
 import input_functions
 import time
+import config_handling
 
 
 
 def main():
-    api_city = input_functions.city_input()
+    city = input_functions.city_input()
+    key = config_handling.get_key()
+    key_city = [key,city]
     x = input_functions.time_input()
     while True:
-        API_functions.weather_object_get(api_city).change_wallpaper()
+        API_functions.weather_object_get(key_city).change_wallpaper()
         time.sleep(x)
 
 if __name__ == "__main__":
