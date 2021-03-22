@@ -1,6 +1,5 @@
 import API_functions
 import weather_class
-import loop_timing_functions
 import input_functions
 import time
 import config_handling
