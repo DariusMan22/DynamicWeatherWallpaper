@@ -20,6 +20,7 @@ def openweathermap_get(api_city):
 
 def weather_object_get(api_city):
     """ function that returns an weather_object based on the current reading from the api"""
+    
     weather_param = []
     weather_param = openweathermap_get(api_city)
     weather_object = weather_class.Weather(

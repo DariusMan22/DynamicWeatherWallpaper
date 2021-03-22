@@ -10,6 +10,7 @@ def city_input():
 
 def time_input():
     """asks for time input and converts it to minutes"""
+    
     x = input(f'How often do you want the wallpaper do be changed(minutes)?:\n')
     x = float(x)
     x = x * 60

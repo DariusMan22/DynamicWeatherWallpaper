@@ -1,7 +1,7 @@
 import configparser
 
 def get_key():
-    """gets key from the confing,ini"""
+    """gets key from the confing.ini"""
 
     config = configparser.ConfigParser()
     config.read('config.ini')

@@ -20,10 +20,12 @@ class Weather:
 
     def change_linux(self):
         """checks the description,weather and temperature in order to pick the right image"""
+        
         wallpaper_handling.for_linux(self.current_weather,self.description)
 
     def change_windows(self):
         """checks the description,weather and temperature in order to pick the right image"""
+        
         wallpaper_handling.for_windows(self.current_weather, self.description)
 
     def change_wallpaper(self):

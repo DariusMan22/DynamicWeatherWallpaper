@@ -6,7 +6,6 @@ import time
 import config_handling
 
 
-
 def main():
     city = input_functions.city_input()
     key = config_handling.get_key()

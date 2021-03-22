@@ -6,3 +6,5 @@ Lib/
 Scripts/
 pyvenv.cfg
 config.ini
+include
+loop_timing_functions.py
